@@ -4,7 +4,7 @@ body {
   background-color:#ffffff;
 }
 
-div.main { 
+div.main {
   text-align: center;
 }
 
@@ -12,12 +12,12 @@ div.main img {
   margin: 40px 0;
 }
 
-div.content {   
-  color:#1f1f1f; 
+div.content {
+  color:#1f1f1f;
 }
 .content #message {
   margin: 10px 0 50px 0;
-  padding: 30px 0;  
+  padding: 30px 0;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
   font-size: 40pt;

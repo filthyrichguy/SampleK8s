@@ -1,4 +1,6 @@
 # Simple deployment used to deploy and manage the app in nigelpoulton/getting-started-k8s:1.0
+---
+# 3. Deployment Spec
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -10,15 +12,19 @@ spec:
   selector:
     matchLabels:
       app: web
+
+  # 2. Pod Spec
   template:
     metadata:
       labels:
         app: web
-    spec: 
+    spec:
       terminationGracePeriodSeconds: 1
+
+      # 1. Container Spec
       containers:
-      - name: hello-pod
-        image: nigelpoulton/getting-started-k8s:1.0
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 8080
+        - name: hello-pod
+          image: nigelpoulton/getting-started-k8s:1.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
